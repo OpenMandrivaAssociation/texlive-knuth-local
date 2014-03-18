@@ -1,11 +1,11 @@
-# revision 32856
+# revision 33147
 # category Package
 # catalog-ctan /systems/knuth/local
-# catalog-date 2012-06-11 20:26:30 +0200
+# catalog-date 2014-02-26 23:03:13 +0100
 # catalog-license knuth
 # catalog-version undef
 Name:		texlive-knuth-local
-Version:	20120611
+Version:	20140226
 Release:	1
 Summary:	Knuth's local information
 Group:		Publishing
@@ -60,6 +60,7 @@ directories.
 %{_texmfdistdir}/fonts/tfm/public/knuth-local/random.tfm
 %{_texmfdistdir}/fonts/tfm/public/knuth-local/snfont.tfm
 %{_texmfdistdir}/mft/knuth-local/e.mft
+%{_texmfdistdir}/tex/plain/knuth-local/xepsf.tex
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,4 +70,5 @@ directories.
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts mft %{buildroot}%{_texmfdistdir}
+cp -fpar fonts tex mft %{buildroot}%{_texmfdistdir}
+
