@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-knuth-local
 Version:	20140226
-Release:	1
+Release:	2
 Summary:	Knuth's local information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/knuth/local
