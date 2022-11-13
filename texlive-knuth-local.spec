@@ -1,11 +1,11 @@
 Name:		texlive-knuth-local
-Version:	20190228
+Version:	57963
 Release:	1
 Summary:	Knuth's local information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/knuth/local
 License:	KNUTH
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/knuth-local.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/knuth-local.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -17,12 +17,12 @@ on, or complementary to, the matter in his distribution
 directories.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -33,11 +33,10 @@ directories.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0
+%autosetup -p1 -c
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex mft %{buildroot}%{_texmfdistdir}
-
