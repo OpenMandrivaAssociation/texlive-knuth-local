@@ -3,7 +3,7 @@ Version:	57963
 Release:	2
 Summary:	Knuth's local information
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/systems/knuth/local
+URL:		https://www.ctan.org/tex-archive/systems/knuth/local
 License:	KNUTH
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/knuth-local.r%{version}.tar.xz
 BuildArch:	noarch
